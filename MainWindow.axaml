@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Avalonia.NETCoreApp2.MainWindow"
+        WindowStartupLocation="CenterScreen"
+        SizeToContent="WidthAndHeight"
+        TransparencyLevelHint="Transparent"
+        SystemDecorations="None"
+        CanResize="False"
+        ShowInTaskbar="False"
+        Deactivated="WindowBase_OnDeactivated"
+        Topmost="True"
+        Title="Avalonia.NETCoreApp2">
+    <Window.Background>
+        <SolidColorBrush Opacity="0" Color="White"/>
+    </Window.Background>
+    <StackPanel x:Name="StackPanel" PointerPressed="InputElement_OnPointerPressed">
+        <Image x:Name="sam" Height="700" Image.Source="images/iwantyou.png">
+        </Image>
+        <Viewbox Width="{Binding Path=ActualWidth, ElementName=sam}" Height="100">
+            <TextBlock x:Name="text" TextWrapping="Wrap" Foreground="Black" FontFamily="Impact"/>
+        </Viewbox>
+    </StackPanel>
+</Window>
